@@ -12,3 +12,5 @@ select
     fax
 from
     {{ ref('raw_customers') }}
+
+---
