@@ -33,6 +33,7 @@ models:
   northwind:
     raw:
       materialized: view
+      +tags: "tabela_critica"
       +docs:
         node_color: "#cd7f32"  # Cor bronze para a camada raw
     staging:
