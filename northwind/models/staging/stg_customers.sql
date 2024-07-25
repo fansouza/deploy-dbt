@@ -1,8 +1,3 @@
--- IMPORTS
-with sources as (
-    select * from {{ref('raw_customers')}}
-),
-with renamed_and_cleaning as (
 select
     customer_id,
     company_name,
@@ -16,8 +11,4 @@ select
     phone,
     fax
 from
-    sources
-)
-
---query final
-select * from renamed_and_cleaning
+    {{ ref('raw_customers') }}
